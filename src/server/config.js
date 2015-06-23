@@ -27,7 +27,8 @@ var config = {
 	mails:{
 		eventProcessingError: 'peter.ladanyi@unionsoft.sk',
 		massmailSenderAddress:'caihp@unionsoft.eu',
-		requestSolverAddress:'peter.ladanyi@unionsoft.sk'
+		requestSolverAddress:'peter.ladanyi@unionsoft.sk',
+		requestSenderAddress:'websupport@unionsoft.sk'
 	},
 	schemaRegistry:{
 		schemas : [ 'permissions.json', 'login.json', 'systemCredentials.json', 'people.json',

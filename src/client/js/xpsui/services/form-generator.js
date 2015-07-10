@@ -65,6 +65,7 @@
 				field.attr('xpsui-model', modelPath);
 				field.attr('xpsui-schema', schemaPath);
 			} else if (mode === this.MODE.EDIT) {
+				log.debug('schemaFragment: ', schemaFragment);
 				if (schemaFragment.type === 'array') {
 					if (schemaFragment.items && schemaFragment.items.render && schemaFragment.items.render.component ) {
 						field = angular.element('<div xpsui-array-control-edit="' + schemaFragment.items.render.component + '"></div>');
@@ -98,8 +99,8 @@
 					} else if (schemaFragment.render.component === 'psui-contenteditable') {
 						field = angular.element('<div xpsui-contenteditable></div>');
 
-					} else if (schemaFragment.render.component === 'xpsui-uploadable-file') {
-						field = angular.element('<div xpsui-uploadable-file></div>');
+					} else if (schemaFragment.render.component=="xpsui-uploadable-file") {
+						field = angular.element('<div xpsui-uploadable-file class="xpsui-uploadable-file-edit"></div>');
 					} else {
 						field = angular.element('<div>Unsupported render component ' + schemaFragment.render.component + '</div>');
 					}
